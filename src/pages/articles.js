@@ -65,7 +65,7 @@ const FeaturedArticle = ({ img, title, time, summary, link }) => {
         />
       </Link>
       <Link href={link} target='_blank'>
-        <h2 className=' capitalize text-2xl font-bold my-2 my-4 hover:underline '>
+        <h2 className=' capitalize text-2xl font-bold my-2 mt-4 hover:underline '>
           {title}
         </h2>
       </Link>
