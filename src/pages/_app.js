@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -21,9 +22,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       <main
         className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
-        <Navbar />
-        <Component {...pageProps} />
-        <Footer />
+          <ErrorBoundary><Navbar/></ErrorBoundary>
+          <ErrorBoundary><Component {...pageProps} /></ErrorBoundary>
+          <ErrorBoundary><Footer/></ErrorBoundary>
       </main>
     </>
   );
