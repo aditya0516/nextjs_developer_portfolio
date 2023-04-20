@@ -12,14 +12,14 @@ const montserrat = Montserrat({
 const App = ({Component, pageProps}) => {
     return (
         <>
-            <Head>
-                <title>Meet Aditya...</title>
-                <link rel="icon" href="/favicon.ico"/>
-                <metadata
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0"
-                />
-            </Head>
+            {/*<Head>*/}
+            {/*    <title>Meet Aditya...</title>*/}
+            {/*    <link rel="icon" href="/favicon.ico"/>*/}
+            {/*    <metadata*/}
+            {/*        name="viewport"*/}
+            {/*        content="width=device-width, initial-scale=1.0"*/}
+            {/*    />*/}
+            {/*</Head>*/}
             <main
                 className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
                 <ErrorBoundary><Navbar/></ErrorBoundary>
