@@ -12,14 +12,14 @@ import React from "react";
 const Home = () => {
     return (
         <>
-            <Head>
-                <title>Meet Aditya...</title>
-                <link rel="icon" href="/favicon.ico"/>
-                <metadata
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0"
-                />
-            </Head>
+            {/*<Head>*/}
+            {/*    <title>Meet Aditya...</title>*/}
+            {/*    <link rel="icon" href="/favicon.ico"/>*/}
+            {/*    <metadata*/}
+            {/*        name="viewport"*/}
+            {/*        content="width=device-width, initial-scale=1.0"*/}
+            {/*    />*/}
+            {/*</Head>*/}
             <main className=" flex items-center text-dark w-full min-h-screen">
                 <Layout className="pt-0">
                     <div className="flex items-center justify-between w-full">
