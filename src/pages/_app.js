@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title>Meet Aditya...</title>
         <link rel='icon' href='/favicon.ico' />
@@ -26,6 +26,6 @@ export default function App({ Component, pageProps }) {
           <ErrorBoundary><Component {...pageProps} /></ErrorBoundary>
           <ErrorBoundary><Footer/></ErrorBoundary>
       </main>
-    </>
+    </ErrorBoundary>
   );
 }
