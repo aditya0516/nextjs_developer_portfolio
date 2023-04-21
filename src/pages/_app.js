@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ const App = ({ Component, pageProps }) => {
           <Footer />
         </ErrorBoundary>
       </main>
+      <Analytics />
     </>
   );
 };
