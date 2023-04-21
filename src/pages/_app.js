@@ -4,12 +4,15 @@ import Head from "next/head";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
 });
 const App = ({ Component, pageProps }) => {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -23,7 +26,9 @@ const App = ({ Component, pageProps }) => {
           <Navbar />
         </ErrorBoundary>
         <ErrorBoundary>
-          <Component {...pageProps} />
+          <AnimatePresence mode='wait'>
+            <Component key={router.asPath} {...pageProps} />
+          </AnimatePresence>
         </ErrorBoundary>
         <ErrorBoundary>
           <Footer />
