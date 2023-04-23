@@ -79,7 +79,12 @@ const Navbar = () => {
           <CustomLink href='/' title='Home' className='mr-4' />
           <CustomLink href='/about' title='About' className='mx-4' />
           <CustomLink href='/projects' title='Projects' className='mx-4' />
-          <CustomLink href='/articles' title='Articles' className='ml-4' />
+          {/* <CustomLink href='/articles' title='Articles' className='ml-4' /> */}
+          <CustomLink
+            href='mailto:avj22@njit'
+            title='Contact'
+            className='ml-4'
+          />
         </nav>
 
         <nav className=' flex items-center justify-center flex-wrap'>
@@ -108,13 +113,13 @@ const Navbar = () => {
             <TwitterIcon />
           </motion.a>
           <button
-            className={`ml-3 flex items-center justify-center rounded-full p-1
+            className={`ml-3 flex items-center justify-center rounded-full p-1 
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             onClick={() => setMode(mode === "light" ? "dark" : "light")}>
             {mode === "dark" ? (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon className={"fill-dark w-auto h-6 "} />
             ) : (
-              <MoonIcon className={"fill-dark"} />
+              <MoonIcon className={"fill-dark w-auto h-6"} />
             )}
           </button>
         </nav>
@@ -138,16 +143,21 @@ const Navbar = () => {
               title='Projects'
               toggle={handleClick}
             />
-            <CustomMobileLink
+            {/* <CustomMobileLink
               href='/articles'
               title='Articles'
+              toggle={handleClick}
+            /> */}
+            <CustomMobileLink
+              href='mailto:avj22@njit'
+              title='Contact'
               toggle={handleClick}
             />
           </nav>
 
           <nav className=' flex items-center justify-center flex-wrap mt-3'>
             <motion.a
-              href='http://www.github.com'
+              href='https://github.com/aditya0516'
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.8 }}
@@ -155,7 +165,7 @@ const Navbar = () => {
               <GithubIcon className={"bg-light rounded-full dark:bg-dark"} />
             </motion.a>
             <motion.a
-              href='http://www.linkedin.com'
+              href='https://www.linkedin.com/in/aditya-v-jadhav/'
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.8 }}
@@ -163,7 +173,7 @@ const Navbar = () => {
               <LinkedInIcon />
             </motion.a>
             <motion.a
-              href='http://www.twitter.com'
+              href='https://twitter.com/adityajadhav70'
               target={"_blank"}
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.8 }}
@@ -175,9 +185,9 @@ const Navbar = () => {
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
               onClick={() => setMode(mode === "light" ? "dark" : "light")}>
               {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
+                <SunIcon className={"fill-dark !w-6"} />
               ) : (
-                <MoonIcon className={"fill-dark"} />
+                <MoonIcon className={"fill-dark !w-6"} />
               )}
             </button>
           </nav>

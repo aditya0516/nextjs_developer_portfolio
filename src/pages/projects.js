@@ -5,7 +5,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project1 from "../../public/images/projects/iotresized.jpg";
+import project2 from "../../public/images/projects/chatbot.png";
+import project3 from "../../public/images/projects/unifiedchatapp.png";
+import project4 from "../../public/images/projects/portfolioproject.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -133,11 +136,23 @@ const projects = () => {
             <div className='col-span-12'>
               <FeaturedProject
                 type='Featured Project'
-                title='Crypto Screener Application'
-                summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.'
-                img={project1}
+                title='Portfolio Website'
+                summary={
+                  "A portfolio project is a website or application that showcases a developer's skills, experience, and projects. The goal of this project is to provide an online presence that highlights a developer's abilities and serves as a digital resume to potential employers or clients."
+                }
+                img={project4}
+                link='/'
+                github='/'
+              />
+            </div>
+
+            <div className='col-span-6 sm:col-span-12'>
+              {" "}
+              <Project
+                type='Project'
+                title='FAQbot'
+                summary='FAQbot is a chatbot designed to answer frequently asked questions (FAQs) from users. The aim of the project is to provide an efficient and convenient way for users to access information about a particular topic or product without the need for human intervention. The FAQbot utilizes natural language processing (NLP) and machine learning algorithms to understand user queries and provide relevant responses.'
+                img={project2}
                 link='/'
                 github='/'
               />
@@ -146,24 +161,11 @@ const projects = () => {
               {" "}
               <Project
                 type='Featured Project'
-                title='Crypto Screener Application'
+                title='Unified Messaging Platform'
                 summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                 It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                 local currency.'
-                img={project1}
-                link='/'
-                github='/'
-              />
-            </div>
-            <div className='col-span-6 sm:col-span-12'>
-              {" "}
-              <Project
-                type='Featured Project'
-                title='Crypto Screener Application'
-                summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.'
-                img={project1}
+                img={project3}
                 link='/'
                 github='/'
               />
@@ -171,16 +173,15 @@ const projects = () => {
             <div className='col-span-12'>
               <FeaturedProject
                 type='Featured Project'
-                title='Crypto Screener Application'
-                summary='A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.'
+                title='Cloud-based Application - IoD (Internet of Drones Platform), IoT (Internet of Things)'
+                summary='This project involved developing a cloud-based business application using React JS, AWS, IoD (Internet of Drones Platform), and IoT (Internet of Things) technologies. The application was designed to help businesses manage and control their drone operations through a single platform.'
                 img={project1}
                 link='/'
                 github='/'
               />
             </div>
-            <div className='col-span-6 sm:col-span-12'>
+
+            {/* <div className='col-span-6 sm:col-span-12'>
               <Project
                 type='Featured Project'
                 title='Crypto Screener Application'
@@ -203,7 +204,7 @@ const projects = () => {
                 link='/'
                 github='/'
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

@@ -446,3 +446,33 @@ export const LinkArrow = ({ className, ...rest }) => (
     />
   </svg>
 );
+
+export const NewCircularText = ({ text, radius,className,...rest }) => {
+  const diameter = radius * 2;
+  const circumference = diameter * Math.PI;
+  const charAngle = 360 / (text.length);
+  const charOffset = radius/3 ;
+
+  return (
+    <svg viewBox={`0 0 ${diameter} ${diameter}`} className={` ${className}`}
+    {...rest}>
+      {text.split("").map((char, index) => {
+        const angle = index * charAngle;
+
+        return (
+          <g transform={`rotate(${angle},${radius},${radius})`} key={index}>
+            <text
+              x={radius}
+              y={charOffset}
+              dominantBaseline="middle"
+              textAnchor="middle"
+              className="font-semibold text-[18px]"
+            >
+              {char}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+};

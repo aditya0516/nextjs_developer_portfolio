@@ -2,6 +2,21 @@ import React, { useRef } from "react";
 import { motion, spring, useScroll } from "framer-motion";
 import LiIcons from "./LiIcons";
 
+const BulletPoints = ({ text }) => {
+  const points = text.trim().split("•");
+  points.shift();
+  return (
+    // <ul className='list-disc list-inside'>
+    points.map((point, index) => (
+      <li key={index} className='my-2'>
+        {/* {console.log(point.length)} */}
+        {point.length > 0 ? point : null}
+      </li>
+    ))
+    // </ul>
+  );
+};
+
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const ref = useRef(null);
   return (
@@ -25,7 +40,9 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className=' capitalize font-medium text-dark/75 xs:text-sm dark:text-light/75'>
           {time} | {address}
         </span>
-        <p className='font-medium w-full md:text-sm'>{work}</p>
+        <ul className='font-medium w-full md:text-sm list-disc list-inside'>
+          <BulletPoints text={work} />
+        </ul>
       </motion.div>
     </li>
   );
