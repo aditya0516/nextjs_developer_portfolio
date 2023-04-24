@@ -22,7 +22,7 @@ const Home = () => {
       <main className=' flex items-center text-dark w-full min-h-screen dark:text-light'>
         <Layout className='pt-0 md:pt-16 sm:pt-0'>
           <div className='flex items-center justify-between w-full lg:flex-col'>
-            <div className='w-[20rem] h-[20rem] overflow-hidden rounded-full border border-1 border-solid border-dark mb-4 hidden lg:inline-block'>
+            <div className='w-[20rem] h-[20rem] overflow-hidden rounded-full border border-1 border-solid border-light dark:border-dark  mb-4 hidden lg:inline-block'>
               {/* <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light ' /> */}
               <Image
                 src={profilePic}
@@ -36,17 +36,20 @@ const Home = () => {
             </div>
             <div className=' w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
               <h2 className='text-base font-semibold self-start lg:self-center'>
-                Hi! my name is
+                Hi! My name is
               </h2>
               <AnimatedText
                 text={"Aditya Jadhav"}
-                className='!text-6xl !text-left dark:text-light xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl'
+                className='!text-6xl !text-left dark:text-light xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-4xl xs:!text-4xl'
               />
-              <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
+              <p className='my-4 text-base font-medium md:text-sm sm:text-sm'>
                 I am a full-stack developer and I am dedicated to turning ideas
                 into innovative web applications. Explore my latest projects and
                 articles, showcasing my expertise in various frameworks and web
-                development.
+                development.&nbsp;
+                <span className=' text-primary dark:text-primaryDark hidden lg:inline-block hover:underline underline-offset-2'>
+                  <Link href={"/about"}>Click Here! to know more.</Link>
+                </span>
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
                 <Link
