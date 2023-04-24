@@ -45,7 +45,7 @@ const Home = () => {
               <p className='my-4 text-base font-medium md:text-sm sm:text-xs'>
                 I am a full-stack developer and I am dedicated to turning ideas
                 into innovative web applications. Explore my latest projects and
-                articles, showcasing my expertise in various framworks and web
+                articles, showcasing my expertise in various frameworks and web
                 development.
               </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
