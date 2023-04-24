@@ -10,6 +10,9 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -38,7 +41,21 @@ const about = () => {
     <>
       <Head>
         <title> About Aditya </title>
-        <meta name='description' content='About Aditya description' />
+        <link rel='icon' href='/favicon.ico' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta
+          name='description'
+          content="Aditya Jadhav's portfolio showcasing his design and development projects, including web and mobile applications, UI/UX design, and Software Development skills."
+        />
+        <meta property='og:title' content='About Aditya' />
+        <meta
+          property='og:description'
+          content="Aditya Jadhav's portfolio showcasing his design and development projects, including web and mobile applications, UI/UX design, and Software Development skills."
+        />
+        <meta property='og:image' content='/portfolioproject.png' />
+        <link rel='canonical' href='https://www.adityajadhav.me' />
+        <meta property='og:locale' content='en_US' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <TransitionEffect />
       <main className='flex w-full flex-col items-center justify-center dark:text-light'>
@@ -94,14 +111,16 @@ const about = () => {
             </div>
             <div className='col-span-2 relative h-max rounded-2xl border-2 border-solid border-dark bg-light  dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light ' />
-              <Image
+              <FramerImage
                 src={profilePic}
                 alt='Created with AI'
-                className='w-full h-auto grayscale rounded-2xl'
+                className='w-full h-auto grayscale rounded-2xl hover:grayscale-0'
                 priority
                 sizes='(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 33vw'
+                whileHover={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
               />
             </div>
             <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>

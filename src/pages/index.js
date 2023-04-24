@@ -9,6 +9,9 @@ import profilePic from "../../public/images/profile/landingImageSquare.png";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import React from "react";
 import TransitionEffect from "@/components/TransitionEffect";
+import { motion } from "framer-motion";
+
+const FramerImage = motion(Image);
 
 const Home = () => {
   return (
@@ -17,6 +20,19 @@ const Home = () => {
         <title>Meet Aditya...</title>
         <link rel='icon' href='/favicon.ico' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta
+          name='description'
+          content="Aditya Jadhav's portfolio showcasing his design and development projects, including web and mobile applications, UI/UX design, and Software Development skills."
+        />
+        <meta property='og:title' content='Meet Aditya...' />
+        <meta
+          property='og:description'
+          content="Aditya Jadhav's portfolio showcasing his design and development projects, including web and mobile applications, UI/UX design, and Software Development skills."
+        />
+        <meta property='og:image' content='/portfolioproject.png' />
+        <link rel='canonical' href='https://www.adityajadhav.me' />
+        <meta property='og:locale' content='en_US' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <TransitionEffect />
       <main className=' flex items-center text-dark w-full min-h-screen dark:text-light'>
@@ -69,14 +85,16 @@ const Home = () => {
             </div>
             <div className=' w-[30vw] md:w-full '>
               {/* <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light ' /> */}
-              <Image
+              <FramerImage
                 src={profilePic}
                 alt='Created with AI'
-                className=' w-full h-auto lg:hidden grayscale'
+                className=' w-full h-auto lg:hidden grayscale hover:grayscale-0'
                 priority
                 sizes='(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 50vw'
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
               />
             </div>
           </div>

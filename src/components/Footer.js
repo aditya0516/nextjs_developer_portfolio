@@ -19,7 +19,7 @@ const Footer = () => {
           {/* TODO:add url to href above */}
         </div>
         <Link
-          href={"/"}
+          href={"mailto:avj22@njit.edu"}
           target={"_blank"}
           className='underline underline-offset-2'>
           Say Hello
